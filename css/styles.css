@@ -1,0 +1,86 @@
+/* ---------- GLOBAL ---------- */
+body {
+  background-color: #0b0e13;
+  color: #e5e5e5;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+
+  /* FIX FOR FIXED NAVBAR OVERLAP */
+  padding-top: 72px;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at top, #111827, #05070b);
+}
+
+/* ---------- SECTIONS ---------- */
+.section {
+  padding: 5rem 0;
+}
+
+.bg-dark-alt {
+  background-color: #0f131a;
+}
+
+.section-title {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.section-text {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  color: #b5b5b5;
+}
+
+/* ---------- GAME CARDS ---------- */
+.game-card {
+  background: linear-gradient(145deg, #121826, #0a0f1a);
+  border: 1px solid #1f2937;
+  padding: 1.5rem;
+  border-radius: 12px;
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+}
+
+.game-card h5 {
+  color: #67e8f9;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  height: 72px;
+}
+
+.nav-link {
+  color: #d1d5db !important;
+}
+
+.nav-link:hover {
+  color: #67e8f9 !important;
+}
+
+/* ---------- NEON TEXT ---------- */
+.neon-text {
+  color: #67e8f9;
+  text-shadow: 0 0 12px rgba(103, 232, 249, 0.6);
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #020617;
+  color: #6b7280;
+}
