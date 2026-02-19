@@ -6,6 +6,28 @@ body {
 
   /* FIX FOR FIXED NAVBAR OVERLAP */
   padding-top: 72px;
+  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main, .section, .container {
+  flex: 1;
+}
+
+.w-60 {
+  width: 60% !important;
+}
+
+
+/* ---------- FOOTER ---------- */
+.footer {
+  background-color: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem 0;
 }
 
 /* ---------- HERO ---------- */
@@ -83,4 +105,103 @@ body {
   padding: 1rem;
   background-color: #020617;
   color: #6b7280;
+}
+
+/* ---------- FEATURES ---------- */
+.feature-display {
+  background-color: #111;
+}
+
+.feature-list .list-group-item {
+  background-color: #000;
+  color: #ccc;
+  border-color: #222;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.feature-list .list-group-item:hover,
+.feature-list .list-group-item.active {
+  background-color: #0dcaf0;
+  color: black;
+}
+
+.rounded-feature {
+  border-radius: 5%;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.feature-detail {
+  background: linear-gradient(145deg, #1a2236, #11141f);
+  height: 675px; /* fixed height */
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-detail .feature-text {
+  overflow-y: auto;
+  margin-top: 1rem;
+}
+
+.banner-image img {
+  object-fit: cover;
+}
+
+/* ---------- PROJECT FILTER ---------- */
+.filter-section {
+    box-shadow: inset 0 8px 15px -10px rgba(255,255,255,0.25),
+                inset 0 -8px 15px -10px rgba(0,0,0,0.4);
+}
+
+.filter-btn {
+    position: relative;
+    transition: all 0.15s ease;
+    
+    /* 3D base depth */
+    box-shadow:
+        0 4px 0 rgba(0, 0, 0, 0.4),
+        0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Raised (selected) */
+.filter-btn.active {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 10px 0 rgba(0, 0, 0, 0.4),
+        0 14px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Pressed state */
+.filter-btn:active {
+    transform: translateY(2px);
+
+    box-shadow:
+        0 2px 0 rgba(.1, 0, 0, 0.4),
+        0 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ---------- TECH IMPLEMENTATION ---------- */
+.tech-grid {
+  display: grid;
+  grid-template-columns: max-content max-content; /* fit content exactly */
+  column-gap: 20px;
+  row-gap: 6px;
+
+  justify-content: center; /* center the whole grid */
+  margin: 0 auto;
+}
+
+.tech-label {
+  text-align: right;
+  color: #888;
+  font-weight: 600;
+}
+
+.tech-value {
+  text-align: left;
+  color: #ddd;
 }

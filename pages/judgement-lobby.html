@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Name | Shawn Youssef</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon.png">
+  <link rel="shortcut icon" href="../assets/images/favicon.ico">
+  
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top border-bottom border-secondary">
+  <div class="container position-relative">
+
+    <!-- Left: Back -->
+    <a class="navbar-brand neon-text fw-bold btn btn-outline-info px-4 py-2"
+       href="../index.html">
+       <i class="bi bi-house-fill"></i>
+    </a>
+    <a class="navbar-brand neon-text fw-bold btn btn-outline-info px-4 py-2"
+       href="projects.html">
+       <i class="bi bi-caret-left-fill"></i>
+    </a>
+
+    <!-- Center: Page Title -->
+    <div class="position-absolute top-50 start-50 translate-middle">
+      <span class="navbar-text fw-bold fs-4 text-white">
+        Judgement Lobby
+      </span>
+    </div>
+
+    <!-- Mobile toggle -->
+    <button class="navbar-toggler ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Right: Icons -->
+    <div class="collapse navbar-collapse bg-black" id="navbarNav">
+      <ul class="navbar-nav ms-auto gap-4 fw-bold align-items-center">
+
+        <li class="nav-item">
+          <a class="nav-link fs-4"
+             href="https://www.youtube.com/@JudgementLobbyVR/"
+             target="_blank">
+            <i class="bi bi-youtube"></i>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link fs-4"
+             href="https://www.meta.com/experiences/judgement-lobby/24411648788470823/"
+             target="_blank">
+            <i class="bi bi-meta"></i>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+
+  <main>
+  <!-- Header -->
+<!--  <header class="section pt-5 mb-0 px-1 py-1">
+    <div class="container text-center">
+      <h1 class="fw-bold neon-text">Judgement Lobby</h1>
+      <p class="text-secondary mt-0 mb-0">
+        A live social performance game where the audience decides your fate.
+      </p>
+    </div>
+  </header>-->
+
+  <!-- Banner Image -->
+<section class="banner-image mb-3 px-5 py-5 bg-dark-alt">
+  <img src="../assets/images/JL_HeroImage.webp" 
+       alt="Judgement Lobby Banner"
+       class="img-fluid w-100 rounded">
+        <p class="text-center mt-4 mb-1">
+        A live social performance game where the audience decides your fate.
+      </p>
+</section>
+  
+  <!-- Overview Section -->
+  <section class="section">
+    <div class="container">
+      <h3 class="mb-3 text-center">Overview</h3>
+      <div class="row align-items-center g-5">
+
+        <!-- Image Placeholder -->
+        <div class="col-md-6 justify-content-center">
+            <img src="../assets/images/JL_Eye.webp" 
+                 alt="Judgement Lobby environment screenshot" 
+                 class="img-fluid rounded shadow">
+        </div>
+
+        <!-- Text Content -->
+        <div class="col-md-6">
+          <p class="text-secondary">
+            Judgement Lobby is a multiplayer VR game developed by myself and two others under contract at Squido Studios.
+            The project focused on creating an original IP built around structured social interaction for groups of 4–8 players.<br><br>
+            I was responsible for programming the main game loop, reactive environment, and interactables.
+            Because the game was multiplayer and utilized a peer-to-peer connection,
+            code needed to be network friendly and gracefully handle breaks caused by the host disconnecting.<br><br>
+            We were provided with a template project and one month to take the game from concept to storefront,
+            which meant often needing to derive new gameplay systems from existing frameworks.<br><br>
+            Working in a very small group against extremely tight deadlines also meant I was involved in other domains such as;
+          </p>
+
+          <p class="text-secondary">
+            Game Design, 3D Art, Writing, and Quality Assurance.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Features Section -->
+<section class="section bg-dark-alt">
+  <div class="container-fluid px-4 px-lg-5">
+
+    <h3 class="text-center mb-5">Key Features</h3>
+
+    <div class="row g-4">
+
+      <!-- LEFT: Feature Cards -->
+      <div class="col-md-3 d-flex flex-column">
+
+        <div class="game-card p-4 mb-4 feature-card active"
+             data-title="Dynamic Prompt Selection"
+             data-description="Randomized prompt selection ensures each performance is unique while maintaining structured pacing and fairness.
+             Players will get to choose between one of three prompts, along with the option to play without one.
+             A timer is displayed on the right; when it runs out a random of the three is selected.<br><br>
+             Buttons are styled based on the prompt's defined category;
+             <b><span style='color:#4dff88;'>Roleplay</span></b>, 
+             <b><span style='color:#ffd24d;'>Joke</span></b>, 
+             <b><span style='color:#4da6ff;'>Debate</span></b>, 
+             <b><span style='color:#ff4d4d;'>Action</span></b>, and 
+             <b><span style='color:#c084fc;'>Misc</span></b>.<br>
+             Selecting a prompt will display your selection, spawn props, and allow others to vote."
+             data-image="../assets/images/JL_TB1.webp"
+             data-image2="../assets/images/JL_TB2.webp">
+          <h5>Trial Board</h5>
+          <p class="text-secondary mb-0">An interactable tablet used to select a prompt. </p>
+        </div>
+
+        <div class="game-card p-4 mb-4 feature-card"
+             data-title="Real-Time Audience Voting"
+             data-description="Audience members influence gameplay outcomes through responsive voting systems integrated directly into the game loop.
+             The performer on stage can leave whenever they please, but if they garner too many negative votes they will be kicked off.
+             The voting result directly affects the performer's &quot;<b>Karma</b>&quot; rating, a stat that multiplies their rewards. Votes are counted
+             on a massive scale in direct view of the performer, their total karma change shown on top, also shown on the television above the stage."
+             data-image="../assets/images/JL_Scale.webp">
+          <h5>Real-Time Audience Voting</h5>
+          <p class="text-secondary mb-0">Once someone begins performing, it is up to the audience to vote.</p>
+        </div>
+
+        <div class="game-card p-4 mb-4 feature-card"
+             data-title="Reactive Environment"
+             data-description="Taking place in the afterlife, this environment exists between three states; <b>limbo</b>, <b>heaven</b>, and <b>hell</b>.
+             The ambient music, giant eyeball, and sky color all gradually change based on audience reaction.
+             "
+             data-image="../assets/images/JL_Environment.webp">
+          <h5>Dynamic Environment</h5>
+          <p class="text-secondary mb-0">The environment adapts according to audience votes.</p>
+        </div>
+          
+        <div class="game-card p-4 mb-4 feature-card"
+             data-title="Prompt Content Pipeline"
+             data-description="A data-driven pipeline to allow us to easily create new prompts.
+             Prompts <i>may</i> contain <b>fill-ins</b>, an extra element to add variation.
+             Each definition outlines possible fill-ins, button presentation, UI text, and interactable props to spawn.
+             I included text interpolation to UI text fields, so designers can specify where they want the performer's name or the fill-in to appear."
+             data-image="../assets/images/JL_PromptPipeline.webp">
+          <h5>Prompt Creation </h5>
+          <p class="text-secondary mb-0">A system for designers to easily add new prompts.</p>
+        </div>
+          
+        <div class="game-card p-4 feature-card"
+             data-title="Prop & Environment Design"
+             data-description="I designed and implemented most of the props seen in the game, <i>some being derived from company provided code</i>.
+             Due to our short development schedule, the bulk of prop models and materials were sourced from the Unity Marketplace; the rest we needed were made by myself.
+             <br><br><i>Examples of the prop sets I created include the <b>whiteboard</b> and <b>island environment</b></i>."
+             data-image="../assets/images/JL_Drawing.webp"
+             data-image2="../assets/images/JL_Island.webp">
+          <h5>Player Experience</h5>
+          <p class="text-secondary mb-0">A large variety of possible props and environments.</p>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: Dynamic Detail -->
+      <div class="col-md-9">
+        <div class="feature-detail p-4 rounded shadow">
+
+          <div class="row feature-image justify-content-center mb-2">
+            <img id="featureImage"
+                 src="../assets/images/jl-prompts.webp"
+                 class="img-fluid rounded-feature w-50"
+                 alt="Feature preview">
+                        <img id="featureImage2"
+                 src="../assets/images/JL_Eye.webp"
+                 class="img-fluid rounded-feature w-50"
+                 alt="Feature preview">
+          </div>
+
+          <div class="feature-text px-5">
+            <h4 id="featureTitle">Dynamic Prompt Selection</h4>
+            <p id="featureDescription">
+              Randomized prompt generation ensures each performance is unique while maintaining structured pacing and fairness.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Additional Media Section -->
+<section class="section">
+  <div class="container-fluid">
+
+    <h3 class="text-center mb-5">Additional Media</h3>
+
+    <div class="row g-3 py-1">
+
+      <!-- Trailer -->
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="ratio ratio-16x9">
+        <video controls class="rounded shadow w-100">
+          <source src="https://scontent-yyz1-1.oculuscdn.com/v/t64.7195-25/499617719_778249318036613_2504966882495432095_n.mp4?_nc_cat=100&ccb=1-7&_nc_sid=b20b63&_nc_ohc=SR2hunFb1A8Q7kNvwHULIlc&_nc_oc=Adlech_pcqsKVREtXJ9QJY7JRHjcXCSYN0wuJsL77-lVBkG2Mvsz0XXEEwV8HvcCyj8&_nc_zt=28&_nc_ht=scontent-yyz1-1.oculuscdn.com&_nc_gid=l2E1PzSDBIhfxE1tFnxhVA&oh=00_AfsQjHRPfLZNT4VP0T8_fE0GAiYCm_--D_27F9Tud5jOxw&oe=699CB471" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+        
+      <!-- Image 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <img src="../assets/images/JL_PromptPipeline.webp" 
+             alt="Screenshot 1"
+             class="img-fluid rounded shadow cursor-pointer"
+             data-bs-toggle="modal"
+             data-bs-target="#lightboxModal"
+             data-bs-image="../assets/images/JL_PromptPipeline.webp">
+      </div>
+
+      <!-- Image 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <img src="../assets/images/JL_Prompt.webp" 
+             alt="Screenshot 2"
+             class="img-fluid rounded shadow cursor-pointer"
+             data-bs-toggle="modal"
+             data-bs-target="#lightboxModal"
+             data-bs-image="../assets/images/JL_Prompt.webp">
+      </div>
+      
+      <!-- Image 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <img src="../assets/images/JL_TheEye.webp" 
+             alt="Screenshot 2"
+             class="img-fluid rounded shadow cursor-pointer"
+             data-bs-toggle="modal"
+             data-bs-target="#lightboxModal"
+             data-bs-image="../assets/images/JL_TheEye.webp">
+      </div>
+      <!-- Add more images similarly -->
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- Lightbox Modal -->
+<div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-dark rounded shadow">
+      <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+        <img id="lightboxImage" src="" class="img-fluid rounded" alt="Full view">
+      </div>
+      <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+    </div>
+  </div>
+</div>
+  
+
+  <!-- Specs -->
+  <section class="section bg-dark-alt">
+    <div class="container text-center">
+
+<h3 class="mb-4">Technical Implementation</h3>
+
+<div class="tech-grid" style="transform: translateX(10px);">
+  <div class="tech-label">Engine</div>
+  <div class="tech-value">Unity 2022.3 LTS</div>
+
+  <div class="tech-label">Programming</div>
+  <div class="tech-value">C#</div>
+
+  <div class="tech-label">Networking</div>
+  <div class="tech-value">Photon Fusion 1.1, Azure Playfab</div>
+  
+  <div class="tech-label">Systems</div>
+  <div class="tech-value">Multiplayer Networking, Data-Driven Pipeline</div>
+
+</div>
+
+    </div>
+  </section>
+  
+<section class="section">
+    <div class="container text-center">
+
+<h3 class="mb-4">Collaborators</h3>
+
+<div class="tech-grid" style="transform: translateX(-70px);">
+  <div class="tech-label">Publisher</div>
+  <div class="tech-value"><a href="https://www.squidostudio.com/" target="_blank">Squido Studios <i class="bi bi-globe"></i></a></div>
+
+  <div class="tech-label">Lead Artist, Game Designer, Programmer</div>
+  <div class="tech-value"><a href="https://www.linkedin.com/in/magdalena-s-17b458292/" target="_blank">Magdalena Szlapczynski <i class="bi bi-linkedin"></i>
+</a></div>
+
+  <div class="tech-label">Live Services Developer, Programmer</div>
+  <div class="tech-value"><a href="https://www.linkedin.com/in/abdulmaliq-jinad/" target="_blank">Abdulmaliq Jinad <i class="bi bi-linkedin"></i>
+</a></div>
+</div>
+
+    </div>
+  </section>
+
+  <!-- Back Button -->
+  <section class="section bg-dark-alt text-center">
+    <div class="container">
+      <a href="projects.html" class="btn btn-outline-info btn-lg">
+        <i class="bi bi-caret-left-fill"></i> Back to Projects
+      </a>
+    </div>
+  </section>
+</main>
+  
+  
+  <!-- Footer -->
+  <footer class="footer text-center py-3">
+    © 2026 Shawn Youssef
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/feature-preview-cards.js"></script>
+  <script>
+  // Update modal image when thumbnail is clicked
+  const lightboxModal = document.getElementById('lightboxModal');
+  lightboxModal.addEventListener('show.bs.modal', event => {
+    const img = event.relatedTarget;
+    const src = img.getAttribute('data-bs-image');
+    document.getElementById('lightboxImage').src = src;
+  });
+</script>
+</body>
+</html>
