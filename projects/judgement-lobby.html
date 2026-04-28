@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project Name | Shawn Youssef</title>
+  <title>Judgement Lobby | Shawn Youssef</title>
 
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
@@ -216,6 +216,18 @@
       <div class="col-md-9">
         <div class="feature-detail p-4 rounded shadow">
 
+            <div class="mobile-feature-nav d-md-none text-center mt-0 mb-3">
+                <button id="prevFeature" class="btn btn-outline-info me-3">
+                    <i class="bi bi-caret-left-fill"></i>
+                </button>
+
+                <span id="mobileFeatureTitle" class="fw-bold"></span>
+
+                <button id="nextFeature" class="btn btn-outline-info ms-3">
+                    <i class="bi bi-caret-right-fill"></i>
+                </button>
+            </div>
+            
           <div class="row feature-image justify-content-center mb-2">
             <img id="featureImage"
                  src="../assets/images/jl-prompts.webp"

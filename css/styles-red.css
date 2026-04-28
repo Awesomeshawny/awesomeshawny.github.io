@@ -1,0 +1,249 @@
+/* ---------- GLOBAL ---------- */
+body {
+  background-color: #170303;
+  color: #f3f3f3;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+
+  padding-top: 72px;
+  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main, .section, .container {
+  flex: 1;
+}
+
+.w-60 {
+  width: 60% !important;
+}
+
+
+/* ---------- FOOTER ---------- */
+.footer {
+  background-color: #080808;
+  color: #888;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at top, #2a0000, #050507);
+}
+
+/* ---------- SECTIONS ---------- */
+.section {
+  padding: 5rem 0;
+}
+
+.bg-dark-alt {
+  background-color: #110202;
+}
+
+.section-title {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.section-text {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  color: #aaa;
+}
+
+/* ---------- GAME CARDS ---------- */
+.game-card {
+  background: linear-gradient(145deg, #140909, #070303);
+  border: 1px solid #3a0f0f;
+  padding: 1.5rem;
+  border-radius: 12px;
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 12px rgba(255, 0, 60, 0.6),
+    0 0 24px rgba(255, 0, 60, 0.3);
+}
+
+.game-card h5 {
+  color: #ff003c;
+  text-shadow: 0 0 10px rgba(255, 0, 60, 0.7);
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  height: 72px;
+}
+
+.nav-link {
+  color: #d1d5db !important;
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+  color: #ff003c !important;
+  text-shadow:
+    0 0 6px rgba(255, 0, 60, 0.8),
+    0 0 12px rgba(255, 0, 60, 0.6);
+}
+
+/* ---------- NEON TEXT ---------- */
+.neon-text {
+  color: #ff003c;
+  text-shadow:
+    0 0 6px rgba(255, 0, 60, 0.9),
+    0 0 12px rgba(255, 0, 60, 0.7),
+    0 0 24px rgba(255, 0, 60, 0.5);
+}
+
+/* ---------- FEATURES ---------- */
+.feature-display {
+  background-color: #050505;
+}
+
+.feature-list .list-group-item {
+  background-color: #000;
+  color: #aaa;
+  border-color: #220000;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.feature-list .list-group-item:hover,
+.feature-list .list-group-item.active {
+  background-color: #ff003c;
+  color: black;
+  box-shadow:
+    0 0 10px rgba(255, 0, 60, 0.6),
+    0 0 20px rgba(255, 0, 60, 0.3);
+}
+
+/* ---------- FEATURE DETAIL ---------- */
+.feature-detail {
+  background: linear-gradient(
+    145deg,
+    #1f0a12,
+    #090507
+  );
+  height: 675px; /* fixed height */
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-detail .feature-text {
+  overflow-y: auto;
+  margin-top: 1rem;
+}
+
+.rounded-feature {
+  border-radius: 5%;
+  overflow: hidden;
+  display: inline-block;
+}
+
+
+/* ---------- IMAGES ---------- */
+.banner-image {
+  aspect-ratio: 21 / 9;
+  overflow: hidden;
+}
+
+.banner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+/* ---------- PROJECT FILTER ---------- */
+.filter-section {
+    box-shadow:
+        inset 0 8px 15px -10px rgba(255, 0, 60, 0.2),
+        inset 0 -8px 15px -10px rgba(0, 0, 0, 0.6);
+}
+
+.filter-btn {
+    position: relative;
+    transition: all 0.15s ease;
+
+    box-shadow:
+        0 4px 0 rgba(0, 0, 0, 0.5),
+        0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.filter-btn.active {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 10px 0 rgba(0, 0, 0, 0.5),
+        0 0 15px rgba(255, 0, 60, 0.6),
+        0 14px 25px rgba(0, 0, 0, 0.5);
+}
+
+.filter-btn:active {
+    transform: translateY(2px);
+
+    box-shadow:
+        0 2px 0 rgba(0, 0, 0, 0.5),
+        0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ---------- TECH IMPLEMENTATION ---------- */
+.tech-grid {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  column-gap: 20px;
+  row-gap: 6px;
+
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.tech-label {
+  text-align: right;
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+.tech-value {
+  text-align: left;
+  color: #ffd6d6;
+}
+
+@media (max-width: 767px) {
+  .feature-card {
+    display: none;
+  }
+}
+
+.mobile-feature-nav span {
+  min-width: 200px;
+  display: inline-block;
+}
+
+a {
+  color: #ff4d4d;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover {
+  color: #ff1f1f;
+  text-shadow: 0 0 6px rgba(255, 0, 0, 0.6);
+}
+
+a:active {
+  color: #cc0000;
+}

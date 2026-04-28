@@ -87,6 +87,7 @@ main, .section, .container {
 
 .nav-link {
   color: #d1d5db !important;
+  transition: 0.2s;
 }
 
 .nav-link:hover {
@@ -204,4 +205,15 @@ main, .section, .container {
 .tech-value {
   text-align: left;
   color: #ddd;
+}
+
+@media (max-width: 767px) {
+  .feature-card {
+    display: none;
+  }
+}
+
+.mobile-feature-nav span {
+  min-width: 200px;
+  display: inline-block;
 }
